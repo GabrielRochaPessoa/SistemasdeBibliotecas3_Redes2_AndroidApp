@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bibliotecas"
+    >
+
+
+    <!-->Adição de uma imagem  na tela de login do usuário com a tag android:src=" @drawable/nome da imagem"<-->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="81dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginBottom="100dp"
+            android:src="@mipmap/unifei" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="267dp"
+            android:layout_height="77dp"
+            android:layout_marginLeft="100dp"
+            android:gravity="center"
+            android:text="Universidade Federal de Itajubá"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            />
+
+        <Button
+            android:id="@+id/buttonEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="460dp"
+            android:text="Entrar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="250dp"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:text="Revelemo-nos, mais por atos do que por palavras..."
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            />
+    </FrameLayout>
+</android.support.v7.widget.LinearLayoutCompat>
