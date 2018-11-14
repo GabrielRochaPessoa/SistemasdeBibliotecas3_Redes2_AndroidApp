@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:background="@mipmap/bibliotecas"
     android:layout_height="match_parent"
-    tools:context=".log2Activity">
+    tools:context=".Activity.log2Activity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -57,12 +57,18 @@
         <TextView
             android:layout_width="match_parent"
             android:gravity="center"
-            android:text="Não Consegue logar? Clique Aqui!"
+            android:text="Quer trocar a senha? Clique Abaixo!"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnNovaSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alterar Senha"
+
         />
 
 </LinearLayout>
