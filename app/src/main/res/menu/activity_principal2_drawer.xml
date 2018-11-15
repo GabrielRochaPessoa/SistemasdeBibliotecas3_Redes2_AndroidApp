@@ -9,17 +9,22 @@
             android:icon="@android:drawable/ic_menu_upload_you_tube"
             android:title="Empréstimo" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_biblioteca"
             android:icon="@android:drawable/ic_menu_agenda"
             android:title="Biblioteca" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_perfil"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="Perfil" />
     </group>
 
-    <item android:title="Mídias Sociais">
+    <item android:title="Opções">
         <menu>
+            <item
+                android:id="@+id/mudarSenha"
+                android:icon="@android:drawable/ic_lock_lock"
+                android:title="Mudar Senha" />
+
             <item
                 android:id="@+id/exit"
                 android:icon="@android:drawable/ic_lock_power_off"

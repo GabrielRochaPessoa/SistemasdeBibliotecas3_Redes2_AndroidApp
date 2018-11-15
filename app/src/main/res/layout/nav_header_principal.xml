@@ -20,7 +20,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:text="Sistemas de Biblioteca"
+        android:text="Sistemas de Bibliotecas"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView

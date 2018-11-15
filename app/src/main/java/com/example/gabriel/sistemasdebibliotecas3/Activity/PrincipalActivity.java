@@ -1,5 +1,6 @@
 package com.example.gabriel.sistemasdebibliotecas3.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,11 @@ import com.example.gabriel.sistemasdebibliotecas3.R;
 
 public class PrincipalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        DrawerLayout drawer;
+        NavigationView navigationView;
+        Toolbar toolbar=null;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +32,13 @@ public class PrincipalActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -73,20 +79,22 @@ public class PrincipalActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        switch(id) {
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            case R.id.nav_emprestimo:
 
-        } else if (id == R.id.nav_slideshow) {
+            case  R.id.nav_biblioteca:
 
-        } else if (id == R.id.nav_manage) {
+            case R.id.nav_slideshow:
 
-        } else if (id == R.id.nav_share) {
+            case  R.id.mudarSenha:
+                Intent ms = new Intent(PrincipalActivity.this,NovaSenhaActivity.class);
+                startActivity(ms);
+                break;
+            case  R.id.exit:
 
-        } else if (id == R.id.nav_send) {
 
-        }
+            }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

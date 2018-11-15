@@ -54,21 +54,17 @@
         android:layout_height="wrap_content"
         android:text="LOGIN" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:text="Quer trocar a senha? Clique Abaixo!"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btnNovaSenha"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alterar Senha"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Unifei Copyright"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-        />
+
+
 
 </LinearLayout>

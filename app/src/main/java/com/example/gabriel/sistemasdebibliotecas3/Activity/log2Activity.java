@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gabriel.sistemasdebibliotecas3.Database.ConfiguracaoFirebase;
@@ -20,11 +21,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class log2Activity extends AppCompatActivity {
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
+public class    log2Activity extends AppCompatActivity {
     private EditText edtEmail;
     private EditText edtSenha;
     private Button btnLogar;
-    private Button btnNovaSenha;
+    private TextView mudarSenha;
     private FirebaseAuth autenticacao;
     private Usuarios usuarios;
     @Override
@@ -35,7 +38,9 @@ public class log2Activity extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtSenha = (EditText) findViewById(R.id.edtSenha);
         btnLogar = (Button) findViewById(R.id.btnLogar);
-        btnNovaSenha = (Button) findViewById(R.id.btnNovaSenha);
+        mudarSenha = (TextView)findViewById(R.id.mudarSenha);
+
+
 
 
 
