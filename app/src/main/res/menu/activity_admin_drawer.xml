@@ -5,22 +5,22 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_emprestimo"
+            android:id="@+id/adicionaLivro"
             android:icon="@android:drawable/ic_menu_upload_you_tube"
-            android:title="Empréstimo" />
+            android:title="Adicionar Livro" />
         <item
-            android:id="@+id/nav_biblioteca"
-            android:icon="@android:drawable/ic_menu_agenda"
-            android:title="Biblioteca" />
+            android:id="@+id/excluiLivro"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:title="Excluir Livro" />
         <item
-            android:id="@+id/nav_historico"
-            android:icon="@android:drawable/ic_menu_edit"
-            android:title="Histórico" />
+            android:id="@+id/updateLivro"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Update Livro" />
+
     </group>
 
     <item android:title="Opções">
         <menu>
-
             <item
                 android:id="@+id/exit"
                 android:icon="@android:drawable/ic_lock_power_off"

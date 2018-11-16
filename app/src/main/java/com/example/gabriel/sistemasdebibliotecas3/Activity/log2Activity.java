@@ -38,7 +38,7 @@ public class    log2Activity extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtSenha = (EditText) findViewById(R.id.edtSenha);
         btnLogar = (Button) findViewById(R.id.btnLogar);
-        mudarSenha = (TextView)findViewById(R.id.mudarSenha);
+     
 
 
 
@@ -51,12 +51,19 @@ public class    log2Activity extends AppCompatActivity {
                     usuarios = new Usuarios();
                     usuarios.setEmail(edtEmail.getText().toString());
                     usuarios.setSenha(edtSenha.getText().toString());
-                    validaLogin();
-                } else {
+
+                    if(usuarios.getEmail().equals("administrador@admin.com.br") && usuarios.getSenha().equals("admin123")) {
+                        validaLogin2();
+                    }else{
+                        validaLogin();
+                    }
+                }else {
                     Toast.makeText(log2Activity.this, "Preencha os campos de email e senha", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
     }
 
             private void validaLogin() {
@@ -76,8 +83,25 @@ public class    log2Activity extends AppCompatActivity {
                 startActivity(intentAbrirTelaPrincipal);
             }
 
-
+             private void validaLogin2() {
+                autenticacao = ConfiguracaoFirebase.getReferenciaAutenticacao();
+                autenticacao.signInWithEmailAndPassword(usuarios.getEmail(), usuarios.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        abrirTelaAdmin();
+                        Toast.makeText(log2Activity.this, "Login Efetuado com Sucesso ", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        });
     }
+             public void abrirTelaAdmin() {
+            Intent intentAbrirTelaAdmin = new Intent(log2Activity.this, AdminActivity.class);
+            startActivity(intentAbrirTelaAdmin);
+    }
+
+
+}
 
 
 

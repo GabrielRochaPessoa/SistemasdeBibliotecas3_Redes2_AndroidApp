@@ -27,7 +27,7 @@ public class NovaSenhaActivity extends AppCompatActivity {
     private EditText edtEmail;
     private Button btnMudarSenha;
     private FirebaseAuth autenticacao;
-    private Usuarios usuarios;
+    private Usuarios usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

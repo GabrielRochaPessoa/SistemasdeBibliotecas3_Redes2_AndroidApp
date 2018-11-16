@@ -16,29 +16,23 @@ import android.view.MenuItem;
 
 import com.example.gabriel.sistemasdebibliotecas3.R;
 
-public class PrincipalActivity extends AppCompatActivity
+public class AdminActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        DrawerLayout drawer;
-        NavigationView navigationView;
-        Toolbar toolbar=null;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal2);
+        setContentView(R.layout.activity_admin);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -55,7 +49,7 @@ public class PrincipalActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.principal, menu);
+        getMenuInflater().inflate(R.menu.admin, menu);
         return true;
     }
 
@@ -81,25 +75,24 @@ public class PrincipalActivity extends AppCompatActivity
         int id = item.getItemId();
         switch(id) {
 
-            case R.id.nav_emprestimo:
-                Intent emp = new Intent(PrincipalActivity.this,EmprestaActivity.class);
+            case R.id.adicionaLivro:
+                Intent emp = new Intent(AdminActivity.this,CadastrarActivity.class);
                 startActivity(emp);
                 break;
-            case  R.id.nav_biblioteca:
-                Intent bib = new Intent(PrincipalActivity.this,BibliotecaActivity.class);
+            case  R.id.excluiLivro:
+                Intent bib = new Intent(AdminActivity.this,ExcluirActivity.class);
                 startActivity(bib);
                 break;
-            case R.id.nav_historico:
-                Intent hist = new Intent(PrincipalActivity.this,EmprestaActivity.class);
+            case R.id.updateLivro:
+                Intent hist = new Intent(AdminActivity.this,UpdateActivity.class);
                 startActivity(hist);
                 break;
             case  R.id.exit:
-                Intent exit = new Intent(PrincipalActivity.this,log2Activity.class);
+                Intent exit = new Intent(AdminActivity.this,log2Activity.class);
                 startActivity(exit);
                 break;
 
-            }
-
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
