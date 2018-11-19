@@ -23,4 +23,9 @@
     <string name="title_activity_principal">PrincipalActivity</string>
     <string name="title_activity_nova_senha">Sign in</string>
     <string name="title_activity_admin">AdminActivity</string>
+    <string name="title_activity_update">UpdateActivity</string>
+    <string name="title_activity_empresta">EmprestaActivity</string>
+    <string name="title_activity_biblioteca">BibliotecaActivity</string>
+    <string name="title_activity_cadastrar">CadastrarActivity</string>
+    <string name="title_activity_excluir">ExcluirActivity</string>
 </resources>

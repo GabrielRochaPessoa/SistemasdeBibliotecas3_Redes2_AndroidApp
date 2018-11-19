@@ -31,16 +31,15 @@
         <activity
             android:name=".Activity.PrincipalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.NovaSenhaActivity" />
         <activity
             android:name=".Activity.AdminActivity"
             android:label="Administrador"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.BibliotecaActivity" />
         <activity android:name=".Activity.CadastrarActivity" />
-        <activity android:name=".Activity.ExcluirActivity" />
-        <activity android:name=".Activity.UpdateActivity" />
         <activity android:name=".Activity.EmprestaActivity" />
-        <activity android:name=".Activity.BibliotecaActivity"></activity>
+        <activity android:name=".Activity.ExcluirActivity" />
+        <activity android:name=".Activity.UpdateActivity"></activity>
     </application>
 
 </manifest>

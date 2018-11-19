@@ -27,7 +27,6 @@ public class    log2Activity extends AppCompatActivity {
     private EditText edtEmail;
     private EditText edtSenha;
     private Button btnLogar;
-    private TextView mudarSenha;
     private FirebaseAuth autenticacao;
     private Usuarios usuarios;
     @Override
@@ -38,7 +37,7 @@ public class    log2Activity extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtSenha = (EditText) findViewById(R.id.edtSenha);
         btnLogar = (Button) findViewById(R.id.btnLogar);
-     
+
 
 
 
